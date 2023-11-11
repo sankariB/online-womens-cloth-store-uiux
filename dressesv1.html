@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+<!------ Google Fonts ------>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Karla:wght@200;300;400;500&family=Montserrat+Alternates:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<!--External JS-->
+<script src="script.js" async></script>
+<style>
+        .card {
+            /* Ensure all cards have the same height */
+            height: 100%;
+        }
+
+        .shop-item-image {
+            /* Set a fixed height for product images */
+            height: 200px; /* Adjust this value as needed */
+            object-fit: cover;
+        }
+
+        .shop-item-button {
+            /* Position the "Add to Cart" button at the bottom of each card */
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+
+</head>
+
+<!----External CSS----->
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<!-----FontAwsome------>
+<script src="https://kit.fontawesome.com/9d9796826b.js" crossorigin="anonymous"></script>
+
+<body>
+<!---- Bootstrap Script---->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!--Heading-->
+<div>
+<nav class="navbar fixed-top bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" ><i class="fa-solid fa-gift" style="margin-right: 6%;"></i>SK Fashions - Dresses</a>
+
+      <a href="#shopping-cart" style="color: mediumblue;">  <i style="margin-right: 1%;" class="fa-solid fa-cart-shopping justify-content-end fa-xl" ></i></a>
+
+    </div>
+  </nav>
+
+
+
+
+
+<!-- Item Categories-->
+<section id="category">
+  <div class="container-fluid">
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class=" col">
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0259/7103/2124/files/web-layouting1_336x.progressive.jpg?v=1614325580.png" class="card-img-top" alt="..." id="dresses">
+        </div>
+      </div>
+
+      <div class=" col">
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0259/7103/2124/files/web-layouting2_336x.progressive.jpg?v=1614325580.png" class="card-img-top" alt="..." id="tops">
+        </div>
+      </div>
+
+      <div class=" col">
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0259/7103/2124/files/web-layouting4_336x.progressive.jpg?v=1614325580.png" class="card-img-top" alt="..." id="tshirts">
+        </div>
+      </div>
+
+      <div class=" col">
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/0259/7103/2124/files/web-layouting3_336x.progressive.jpg?v=1614325580.png" class="card-img-top" alt="..." id="jeans" >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<a href="#category" class="up-icon"><i class="fa-solid fa-circle-chevron-up"></i></a>
+
+
+<!----------------------------------------------------------------------------------->
+<img src="steps-line.png" style="width: 100%; height: 100%; overflow: hidden;">
+
+
+<!----------------------------------------------------------------------------------->
+<!--Filter Button-->
+<div class = "filter-btns">
+  <a href="index.html"><button type="button" class="filter-btn" id="refresh"><i class="fa-solid fa-rotate" ></i> Refresh</button></a>
+   
+  <button type = "button" class = "filter-btn" id = "home">HOME</button> 
+  <button type = "button" class = "filter-btn" id = "all">TOPS</button>
+  <button type = "button" class = "filter-btn" id = "new">DRESS</button>
+  <button type = "button" class = "filter-btn" id = "office-wear">jeans</button>
+  <button type = "button" class = "filter-btn" id = "t-shirts">t-shirts</button>
+  
+</div>
+<script>
+        // JavaScript to handle button clicks and navigate to new pages
+        document.getElementById("all").addEventListener("click", function() {
+            window.location.href = "tops.html";
+        });
+		 document.getElementById("home").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("new").addEventListener("click", function() {
+            window.location.href = "dressesv1.html";
+        });
+
+        document.getElementById("office-wear").addEventListener("click", function() {
+            window.location.href = "jeans.html";
+        });
+		document.getElementById("t-shirts").addEventListener("click", function() {
+            window.location.href = "tshirts.html";
+        });
+		        
+        
+        document.getElementById("dresses").addEventListener("dblclick", function() {
+		            window.location.href = "dressesv1.html";
+        });
+
+		        document.getElementById("tops").addEventListener("dblclick", function() {
+		            window.location.href = "tops.html";
+		        });
+
+		        document.getElementById("tshirts").addEventListener("dblclick", function() {
+		            window.location.href = "tshirts.html";
+        });
+         document.getElementById("jeans").addEventListener("dblclick", function() {
+				            window.location.href = "jeans.html";
+		        });
+         document.getElementById("purchase").addEventListener("lclick", function() {
+				            window.location.href = "paymentpage.html";
+		        });
+
+
+
+    </script>
+
+<!--Product Cards-->
+<section id="product-cards">
+  <div class="container-fluid">
+    <div class="row row-cols-2 row-cols-md-4 g-4">
+      <div class=" col filter-item all new ">
+        <div class="card h-100">
+          <img src="1.jpg"class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">TRIPLE TOP PLAIN Dress</h5>
+            <p class="card-text shop-item-price"> Rs 3990.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="2.webp" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title shop-item-title">floweral Printed Dress</h5>
+            <p class="card-text shop-item-price"> Rs 4790.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="3.webp" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Vneck black Mini top Dress </h5>
+            <p class="card-text shop-item-price"> Rs 790.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all new">
+        <div class="card h-100">
+          <img src="4.jpg" class="card-img-top shop-item-image " alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Vneck Half Sleeve floweral Printed Dress
+              </h5>
+            <p class="card-text shop-item-price"> Rs 2999.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all office-wear ">
+        <div class="card h-100">
+          <img src="5.webp" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Tow Tone black Dress</h5>
+            <p class="card-text shop-item-price"> Rs 5990.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all office-wear">
+        <div class="card h-100">
+          <img src="6.avif" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Tiny Front floweral-Boo Printed Top</h5>
+            <p class="card-text shop-item-price">Rs 2290.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all office-wear">
+        <div class="card h-100">
+          <img src="7.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title"> Peek-A-Boo Printed  white gown</h5>
+            <p class="card-text shop-item-price">Rs 3550.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all office-wear">
+        <div class="card h-100">
+          <img src="8.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">floweral Frilled Printed Top</h5>
+            <p class="card-text shop-item-price">Rs 3690.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all t-shirts">
+        <div class="card h-100">
+          <img src="9.webp" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">plain yellow floweral gown</h5>
+            <p class="card-text shop-item-price">Rs 5150.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all t-shirts">
+        <div class="card h-100">
+          <img src="10.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">white floweral printed dress</h5>
+            <p class="card-text shop-item-price">Rs 1400.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all t-shirts">
+        <div class="card h-100">
+          <img src="11.webp" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">contrest mixed blue top</h5>
+            <p class="card-text shop-item-price">Rs 1990.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all t-shirts">
+        <div class="card h-100">
+          <img src="12.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">blue white Long-Sleeve Crew shirt</h5>
+            <p class="card-text shop-item-price">Rs 990.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all offers">
+        <div class="card h-100">
+          <img src="13.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">black white different Printed Mini Dress</h5>
+            <p class="card-text shop-item-price">Rs 10000.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all offers">
+        <div class="card h-100">
+          <img src="14.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">white  printed t-shirt </h5>
+            <p class="card-text shop-item-price">Rs 690.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping  " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all offers">
+        <div class="card h-100">
+          <img src="15.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">  red Princess Off Shoulder  Dress</h5>
+            <p class="card-text shop-item-price">Rs 3690.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col filter-item all offers">
+        <div class="card h-100">
+          <img src="16.jpg" class="card-img-top shop-item-image" alt="...">
+          <div class="card-body">
+            <h5 class="card-title shop-item-title"> black t-shirt</h5>
+            <p class="card-text shop-item-price">Rs 990.00</p>
+            <button type="button" style="width: 100%;" class="btn btn-warning mt-auto shop-item-button"><i class="fa-solid fa-cart-shopping " style="margin-right: 4%;"></i>Add To Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--Shopping Cart-->
+<section class="container content-section" id="shopping-cart">
+
+  <h3 style="text-decoration: underline;text-align: center; margin-bottom: 7%;">Shopping Cart</h3>
+
+ <table class="table table-hover table-cart">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody class="cart-items">
+
+
+  </tbody>
+</table>
+
+    <div class="cart-total">
+      <strong class="cart-total-title">Total</strong>
+      <span  class="cart-total-price" style="text-align: right;">RS0.00</span>
+    </div>
+
+
+    <div class="btn-purchase" style="margin-top: 10%;">
+	<button type = "submit" class="btn btn-dark btn-purchase " onclick="location.replace('paymentpage.html')"><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+	</div>
+
+</section>
+
+<!--Footer-->
+<section id="footer">
+  <div class="card text-center">
+
+    <div class="card-body">
+      <h3 class="card-title"><i class="fa-solid fa-gift" style="margin-right: 1%;"></i>SK Fashions</h3>
+      <p>Thank You , Come Again !!!</p>
+    </div>
+    <div class="card-footer text-muted">
+       <p></p>
+       <p></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!--External JS-->
+<script src="script.js"></script>
+
+</body>
+</html>
